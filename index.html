@@ -3,327 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Maheer 💜</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Quicksand',sans-serif;
-background:linear-gradient(180deg,#efe4ff,#e6d6ff,#f8f2ff);
-overflow-x:hidden;
-color:#5f4b7a;
-}
-
-.hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:30px;
-}
-
-.scrapbook{
-
-background:#fffafc;
-width:90%;
-max-width:850px;
-padding:60px;
-border-radius:30px;
-
-box-shadow:0 20px 50px rgba(0,0,0,.15);
-
-position:relative;
-
-text-align:center;
-
-animation:fadeUp 1.2s;
-}
-
-.scrapbook::before{
-
-content:"";
-
-position:absolute;
-width:130px;
-height:35px;
-
-background:#d7b8ff;
-
-top:-15px;
-left:50%;
-
-transform:translateX(-50%) rotate(-3deg);
-
-opacity:.8;
-
-border-radius:6px;
-
-}
-
-h1{
-
-font-family:'Caveat',cursive;
-
-font-size:68px;
-
-color:#8d65c5;
-
-margin-bottom:10px;
-
-}
-
-h2{
-
-font-weight:600;
-
-margin-bottom:25px;
-
-}
-
-p{
-
-font-size:20px;
-
-line-height:1.9;
-
-}
-
-button{
-
-margin-top:40px;
-
-padding:18px 40px;
-
-border:none;
-
-background:#caa7ff;
-
-color:white;
-
-font-size:18px;
-
-border-radius:50px;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-transform:scale(1.05);
-
-background:#b88df7;
-
-}
-
-.flower{
-
-position:fixed;
-
-font-size:24px;
-
-animation:fall linear infinite;
-
-opacity:.8;
-
-}
-
-@keyframes fall{
-
-from{
-transform:translateY(-100px);
-}
-
-to{
-transform:translateY(110vh);
-}
-
-}
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(60px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-#letter{
-
-display:none;
-
-padding:70px 20px;
-
-}
-
-.note{
-
-max-width:760px;
-
-margin:auto;
-
-background:#fffefb;
-
-padding:60px;
-
-border-radius:25px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-
-position:relative;
-
-}
-
-.note::before{
-
-content:"🎀";
-
-position:absolute;
-
-left:-18px;
-
-top:-18px;
-
-font-size:38px;
-
-}
-
-.note::after{
-
-content:"🌸";
-
-position:absolute;
-
-right:-18px;
-
-bottom:-18px;
-
-font-size:38px;
-
-}
-
-.letter{
-
-font-family:'Caveat',cursive;
-
-font-size:40px;
-
-line-height:1.7;
-
-}
-
-footer{
-
-margin-top:40px;
-
-font-size:18px;
-
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="hero">
+  <div class="scrapbook">
+    <h1>For Maheer 💜</h1>
+    <p>a little scrapbook made with love 🌸</p>
 
-<div class="scrapbook">
+    <br>
 
-<h1>For Maheer 💜</h1>
-
-<h2>a little scrapbook made with love</h2>
-
-<p>
-Some people become home without even trying.
-</p>
-
-<button onclick="openLetter()">
-Open My Scrapbook 🌸
-</button>
-
-</div>
-
+    <button onclick="openLetter()">
+      Open My Scrapbook 💌
+    </button>
+  </div>
 </div>
 
 <section id="letter">
+  <div class="note">
+    <h1>Dear Maheer 💜</h1>
 
-<div class="note">
+    <div class="letter">
+      you're actually such a pretty part of my life and i don't think i say that enough.
+      <br><br>
 
-<div class="letter">
+      everything is just more fun when you're around, even the dumbest little things.
+      <br><br>
 
-you’re actually such a pretty part of my life and i don’t think i say that enough.
-<br><br>
+      i'm really glad i have you and i hope you know how much i love and appreciate you.
+      <br><br>
 
-everything is just more fun when you’re around, even the dumbest little things.
-<br><br>
-
-i’m really glad i have you and i hope you know how much i love and appreciate you.
-<br><br>
-
-💜
-
-</div>
-
-<footer>
-
-— made with lots of love.
-
-</footer>
-
-</div>
-
+      🌸💜🌸
+    </div>
+  </div>
 </section>
 
-<script>
-
-function openLetter(){
-
-document.querySelector(".hero").style.display="none";
-
-document.getElementById("letter").style.display="block";
-
-}
-
-for(let i=0;i<25;i++){
-
-const flower=document.createElement("div");
-
-flower.className="flower";
-
-flower.innerHTML=Math.random()>.5?"🌸":"💜";
-
-flower.style.left=Math.random()*100+"vw";
-
-flower.style.animationDuration=(6+Math.random()*8)+"s";
-
-flower.style.animationDelay=Math.random()*5+"s";
-
-document.body.appendChild(flower);
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
