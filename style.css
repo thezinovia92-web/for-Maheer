@@ -1,84 +1,10 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:Arial,sans-serif;
-  background:linear-gradient(#f7efff,#ead8ff);
-  color:#6b4ca5;
-  overflow-x:hidden;
-}
-
-.hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.scrapbook,.note{
-  background:#fffdfd;
-  width:90%;
-  max-width:800px;
-  padding:50px;
-  border-radius:25px;
-  text-align:center;
-  position:relative;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-.scrapbook::before,.note::before{
-  content:"";
-  position:absolute;
-  width:120px;
-  height:28px;
-  background:#d9b8ff;
-  top:-14px;
-  left:50%;
-  transform:translateX(-50%) rotate(-4deg);
-  border-radius:5px;
-}
-
-h1{
-  font-size:55px;
-  margin-bottom:10px;
-}
-
-button{
-  margin-top:30px;
-  padding:15px 35px;
-  border:none;
-  border-radius:50px;
-  background:#c79cff;
-  color:white;
-  cursor:pointer;
-  font-size:18px;
-}
-
-button:hover{
-  background:#b482f5;
-}
-
-#letter{
-  display:none;
-  padding:60px 20px;
-}
-
-.letter{
-  font-size:22px;
-  line-height:1.8;
-}
-
-.flower{
-  position:fixed;
-  top:-50px;
-  font-size:24px;
-  animation:fall linear infinite;
-}
-
-@keyframes fall{
-  from{transform:translateY(-100px);}
-  to{transform:translateY(110vh);}
-}
+body{margin:0;font-family:Trebuchet MS,sans-serif;background:linear-gradient(#f4ecff,#e6d4ff);color:#5b437e;overflow-x:hidden}
+.cover{height:100vh;display:flex;justify-content:center;align-items:center}
+.book,.page{background:#fffdfb;max-width:800px;margin:30px auto;padding:40px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.15);position:relative}
+.book:before,.page:before{content:'';position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-5deg);width:120px;height:28px;background:#d8b4f8;border-radius:4px}
+button{background:#b78cff;color:#fff;border:0;padding:14px 28px;border-radius:30px;cursor:pointer}
+button:hover{transform:scale(1.05)}
+h1,h2{text-align:center}
+.page{line-height:1.8}
+.flower{position:fixed;top:-40px;font-size:22px;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh)}}
